@@ -11,8 +11,31 @@ flowchart TD
     E -->|AI Chat| F[Collect Data from Chat]
     F --> G
     G --> H{Content File or Process File?}
-    H -->|Content| I[Identify domain-specific information to capture]
-    H -->|Process| J[Identify meta information - skills applicable beyond this repo]
+    H --> N[Select Name and Title]
+    N --> N1[Name: 1-2 words]
+    N --> N2[Title: Can be longer, wordier - conveys same thing]
+    N1 --> H2{Content or Process?}
+    N2 --> H2
+    H2 -->|Content| I[Filename: name.md]
+    I --> I1[Identify domain-specific information to capture]
+    I1 --> I2[Gather high-level important pieces]
+    I2 --> I3[Organize into sections with details]
+    I3 --> I4[Goal: Should be able to reproduce the content in this domain]
+    I4 --> S[Simplify Document]
+    
+    H2 -->|Process| J[Filename: name.process.md]
+    J --> J1[Identify meta information - skills applicable beyond this repo]
+    J1 --> J2[Gather/confirm overall process]
+    J2 --> J3[Document steps and details]
+    J3 --> J4[Goal: Should be able to apply this process in another domain]
+    J4 --> S[Simplify Document]
+    S --> S1[Goal: Smoother collaboration when revisiting]
+    S1 --> S2[Avoid specific examples - they become stale or anchor]
+    S2 --> S3{Is an example actually needed?}
+    S3 -->|Yes| S4[Add example]
+    S3 -->|No| S5[Omit example]
+    S4 --> P[Produce Document]
+    S5 --> P
 
     Q[Asking Questions]
     Q --> Q1{Multiple Choice or Open Question?}
