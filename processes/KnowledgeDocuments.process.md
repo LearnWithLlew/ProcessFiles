@@ -1,49 +1,68 @@
 # Knowledge Documents
 
-The goal of this document is to help people create knowledge documents.
+STARTER_CHARACTER = 📝
 
-This can be executed in 2 different ways:
+## Description
 
-1. At the end of a chat.
-2. As the first prompt in the chat.
+Help people create knowledge documents for future readers (human and AI).
+
+## Entry Points
+
+1. **End of chat** — Extract knowledge from the conversation
+2. **Beginning of chat** — Interview to gather knowledge
 
 ## Process
 
-### If this is at the end of a chat
+### If at the end of a chat
 
-1. Review the chat and treat it as the source material.
-2. Extract the process being described.
-3. If the intended process is unclear, offer a few options for what knowledge document to extract.
-4. Have the user select one of the options, or choose another.
+1. Review the chat as source material.
+2. If the intended document is unclear, offer a few options (e.g., "How to make a startup page", "How to use X tool").
+3. Have the user select one, or specify another.
+4. Interview one question at a time to fill in any missing information until you have enough to produce the document.
+5. Produce the document.
 
-Examples of options:
-
-- How to make a startup page.
-- How to create a page.
-- How to use a specific tool that was used while making the page.
-
-### If this is at the beginning of the chat
+### If at the beginning of a chat
 
 1. Ask: "What is this document about?"
+2. Interview one question at a time until you have enough to produce the document.
+3. Produce the document.
 
-## Output format
+## Output Modes
 
-1. Create a small knowledge document.
-2. At the very top, include a bullet list of the key pieces.
-3. The bullet list can include:
-   - File locations.
-   - Prime directives.
-   - Overall goals.
-   - Process Steps
-4. Add details underneath only if they are necessary.
-5. If the bullet list plus the context of the project is enough, do not add more.
+Depending on context:
+- **File access** — Write directly to the file.
+- **Canvas access** — Open canvas and modify as you go.
+- **Neither** — Interview, then produce the final document at the end.
+
+## Storage
+
+1. Store in `InternalDocuments/` from the project root.
+2. Create the folder if it doesn't exist.
+3. Read subfolders to determine best placement.
+4. Check existing docs — reference them for context offloading (e.g., `see scripts.md for details`).
+
+## Output Format
+
+1. Keep it small.
+2. Start with a bullet list of key pieces:
+   - File locations
+   - Prime directives
+   - Overall goals
+   - Process steps
+3. Add details only if necessary, in subheadings after the bullet point.
+4. If the bullet list plus project context is enough, stop there.
 
 ## Naming
 
-If it is a process document, it should take the form `tool.process.md` or `process.process.md` (for example, `myprocess.process.md`).
+- Process document: `myprocess.process.md`
+- Context document: `mycontext.md`
 
-If it is a context document, it should take the form `mycontext.md`.
+Suggest a few short names (2-3 words max), then recommend the best one.
 
-Suggest a handful of short words (2 to 3 words at most) to create the document name.
+## Quality Check
 
-At the end, suggest the best document name you can think of.
+Flag issues even if uncomfortable:
+- **Ambiguity** — steps that could be interpreted multiple ways
+- **Missing context** — unstated assumptions
+- **Contradictions** — conflicting steps
+- **Gaps** — missing steps to achieve the goal
