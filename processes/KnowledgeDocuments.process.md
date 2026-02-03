@@ -4,7 +4,7 @@ STARTER_CHARACTER = 📝
 
 ## Description
 
-Help people create knowledge documents for future readers (human and AI).
+Help people create knowledge documents to enable better collaboration for future readers (human and AI).
 
 ## Entry Points
 
