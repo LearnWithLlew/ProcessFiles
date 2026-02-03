@@ -11,9 +11,30 @@ Help people create knowledge documents for future readers (human and AI).
 1. **End of chat** — Extract knowledge from the conversation
 2. **Beginning of chat** — Interview to gather knowledge
 
+## Decision Variables
+
+These determine which path to take through the process. Most can be answered immediately.
+
+- **InterviewingAgent**
+  - `agentic_ai`
+  - `website`
+- **DocumentOutput**
+  - `write_file`
+  - `write_to_canvas`
+  - `markdown_block`
+- **AcquisitionMode**
+  - `include_previous_chat`
+  - `brand_new_interview`
+
 ## Process
 
-### If at the end of a chat
+### Determine document type
+
+1. Interview to determine document type:
+    - `content`
+    - `process`
+
+### If including previous chat
 
 1. Review the chat as source material.
 2. If the intended document is unclear, offer a few options (e.g., "How to make a startup page", "How to use X tool").
@@ -21,7 +42,7 @@ Help people create knowledge documents for future readers (human and AI).
 4. Interview one question at a time to fill in any missing information until you have enough to produce the document.
 5. Produce the document.
 
-### If at the beginning of a chat
+### If brand new interview
 
 1. Ask: "What is this document about?"
 2. Interview one question at a time until you have enough to produce the document.
@@ -29,13 +50,14 @@ Help people create knowledge documents for future readers (human and AI).
 
 ## Output Modes
 
-Depending on context:
-- **File access** — Write directly to the file.
-- **Canvas access** — Open canvas and modify as you go.
-- **Neither** — Interview, then produce the final document at the end.
+Depending on `DocumentOutput`:
+- **write_file** — Write directly to the file.
+- **write_to_canvas** — Open canvas and modify as you go.
+- **markdown_block** — Interview, then produce the final document as a markdown block.
 
 ## Storage
 
+If `DocumentOutput` is `write_file`:
 1. Store in `InternalDocuments/` from the project root.
 2. Create the folder if it doesn't exist.
 3. Read subfolders to determine best placement.
