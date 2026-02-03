@@ -1,2 +1,49 @@
-The goal of this document is to help people create knowledge documents either when they're starting a task or when they finish the task. No, I want it when they finish the task. There's two different ways that this document might be executed. One is at the end of a chat and the other is as the first prompt in the chat. If it is at the end of the chat, go through the chat and use that as the process we are trying to extract from. If you're unclear on the process or maybe you want to do it on the meta, give a couple options of I want to extract a document about. For example, I might say I want to extract a document about how to make a startup page or it might be how to create a page period or it might be how to use a specific tool that we used in making the page. List those options to user and have them select or choose another. If it is at the beginning of the prompt, just ask what is this document about? If it is a process document, it should take the form tool.process.md or process.process.md like myprocess.process.md. If it is a context document, it would just be mycontext.md. If the knowledge document is a script, that's going to be an edge case, but it would probably be a PowerShell or a bash script. If it is very complicated, it would be a Python script. Actually, remove the script part. This process is just for creating a text document. You are going to ask questions from the style of Arlo Belshi and Tricia Prodrick about what they just did. And then you are going to put together a very small knowledge document. At the very top of the document, I want a list of bullet points of the key pieces. That could be locations of files. It could be prime directives, overall goals, but like a bulleted list of the few main points. Underneath that, you can add details, but only add details if they are actually necessary. If the list of bullet points would be enough, plus the context of the project you are in, to figure it out, don't add them. Finally, in terms of the name of the document, give a suggestion of a handful of short words. Two to three words at most, to create the document name.
+# Knowledge Documents
+
+The goal of this document is to help people create knowledge documents.
+
+This can be executed in 2 different ways:
+
+1. At the end of a chat.
+2. As the first prompt in the chat.
+
+## Process
+
+### If this is at the end of a chat
+
+1. Review the chat and treat it as the source material.
+2. Extract the process being described.
+3. If the intended process is unclear, offer a few options for what knowledge document to extract.
+4. Have the user select one of the options, or choose another.
+
+Examples of options:
+
+- How to make a startup page.
+- How to create a page.
+- How to use a specific tool that was used while making the page.
+
+### If this is at the beginning of the chat
+
+1. Ask: "What is this document about?"
+
+## Output format
+
+1. Create a small knowledge document.
+2. At the very top, include a bullet list of the key pieces.
+3. The bullet list can include:
+   - File locations.
+   - Prime directives.
+   - Overall goals.
+   - Process Steps
+4. Add details underneath only if they are necessary.
+5. If the bullet list plus the context of the project is enough, do not add more.
+
+## Naming
+
+If it is a process document, it should take the form `tool.process.md` or `process.process.md` (for example, `myprocess.process.md`).
+
+If it is a context document, it should take the form `mycontext.md`.
+
+Suggest a handful of short words (2 to 3 words at most) to create the document name.
+
 At the end, suggest the best document name you can think of.
