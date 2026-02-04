@@ -15,9 +15,6 @@ Help people create knowledge documents to enable better collaboration for future
 
 These determine which path to take through the process. Most can be answered immediately.
 
-- **InterviewingAgent**
-  - `agentic_ai`
-  - `website`
 - **DocumentOutput**
   - `write_file`
   - `write_to_canvas`
@@ -25,6 +22,12 @@ These determine which path to take through the process. Most can be answered imm
 - **AcquisitionMode**
   - `include_previous_chat`
   - `brand_new_interview`
+
+## Interviewing Agent
+
+When assembling what goes into the document, use an interviewing agent to ask one question at a time and produce a coherent result.
+
+The agent implementation can be `agentic_ai` or `website`, but the process is the same. The only difference is whether you start with context (`include_previous_chat`) or interview from scratch (`brand_new_interview`).
 
 ## Process
 
